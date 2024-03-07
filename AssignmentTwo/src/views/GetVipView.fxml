@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="500.0" prefWidth="650.0"
+	spacing="20.0" xmlns="http://javafx.com/javafx/20.0.1"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="controller.GetVipController">
+	<children>
+		<Label text="Get Vip ">
+			<font>
+				<Font size="30.0" />
+			</font>
+		</Label>
+		<Label minHeight="30.0" minWidth="0.0"
+			text="Would you like to subscribe to the application for a montly fee of $0?">
+			<font>
+				<Font size="16.0" />
+			</font>
+		</Label>
+		<HBox alignment="CENTER" prefHeight="10.0" prefWidth="10.0">
+			<children>
+				<Button fx:id="yesButton" minHeight="25.0" minWidth="50.0"
+					mnemonicParsing="false" onAction="#yesClicked" text="Yes">
+					<HBox.margin>
+						<Insets right="40.0" />
+					</HBox.margin>
+				</Button>
+				<Button fx:id="noButton" layoutX="570.0" layoutY="10.0"
+					minHeight="25.0" minWidth="50.0" mnemonicParsing="false"
+					onAction="#noClicked" text="No" />
+			</children>
+		</HBox>
+	</children>
+</VBox>

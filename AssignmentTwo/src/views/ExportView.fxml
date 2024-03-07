@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="500.0" prefWidth="650.0"
+	spacing="10.0" xmlns="http://javafx.com/javafx/20.0.1"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="controller.ExportViewController">
+	<children>
+		<Label text="Export Post">
+			<font>
+				<Font size="30.0" />
+			</font>
+		</Label>
+		<VBox alignment="TOP_CENTER" maxHeight="-Infinity"
+			maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+			spacing="10.0">
+			<children>
+				<HBox alignment="CENTER" spacing="10.0">
+					<children>
+						<Label alignment="CENTER" minWidth="65.0"
+							text="Enter Post ID:">
+							<HBox.margin>
+								<Insets />
+							</HBox.margin>
+						</Label>
+						<TextField fx:id="postID" prefHeight="25.0"
+							prefWidth="188.0" />
+					</children>
+				</HBox>
+			</children>
+		</VBox>
+		<Button fx:id="getPostButton" mnemonicParsing="false"
+			onAction="#getPost" text="Get Post">
+			<VBox.margin>
+				<Insets left="120.0" />
+			</VBox.margin>
+		</Button>
+		<TableView fx:id="postsTable" prefHeight="200.0"
+			prefWidth="200.0">
+			<columns>
+				<TableColumn fx:id="idCol" prefWidth="75.0"
+					text="Post ID" />
+				<TableColumn fx:id="contentCol" prefWidth="134.0"
+					text="Content" />
+				<TableColumn fx:id="authorCol" prefWidth="118.0"
+					text="Author" />
+				<TableColumn fx:id="likesCol" prefWidth="78.0"
+					text="Likes" />
+				<TableColumn fx:id="sharesCol" prefWidth="81.0"
+					text="Shares" />
+				<TableColumn fx:id="dateCol" prefWidth="163.0"
+					text="Date" />
+			</columns>
+		</TableView>
+		<Label fx:id="getPostResult" minHeight="30.0" minWidth="0.0" />
+		<Button fx:id="exportButton" mnemonicParsing="false"
+			onAction="#export" text="Export Post" />
+		<HBox alignment="CENTER_RIGHT" prefHeight="10.0" prefWidth="10.0">
+			<children>
+				<Button fx:id="backButton" minHeight="25.0" minWidth="50.0"
+					mnemonicParsing="false" onAction="#backButtonClicked" text="Back">
+					<HBox.margin>
+						<Insets right="40.0" />
+					</HBox.margin>
+				</Button>
+			</children>
+		</HBox>
+	</children>
+</VBox>

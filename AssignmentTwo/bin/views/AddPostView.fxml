@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="500.0" prefWidth="650.0"
+	spacing="15.0" xmlns="http://javafx.com/javafx/20.0.1"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="controller.AddPostController">
+	<children>
+		<Label text="Add Post">
+			<font>
+				<Font size="30.0" />
+			</font>
+		</Label>
+		<VBox alignment="TOP_CENTER" maxHeight="-Infinity"
+			maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+			spacing="20.0">
+			<children>
+				<HBox alignment="CENTER" spacing="99.0">
+					<children>
+						<Label alignment="CENTER" minWidth="65.0" text="Post ID:">
+							<HBox.margin>
+								<Insets />
+							</HBox.margin>
+						</Label>
+						<TextField fx:id="postID" />
+					</children>
+				</HBox>
+				<HBox alignment="CENTER" spacing="10.0">
+					<children>
+						<Label alignment="CENTER" minWidth="65.0" text="Content:">
+							<HBox.margin>
+								<Insets />
+							</HBox.margin>
+						</Label>
+						<TextArea fx:id="content" prefHeight="100.0"
+							prefWidth="300.0" />
+					</children>
+				</HBox>
+				<HBox alignment="CENTER" spacing="104.0">
+					<children>
+						<Label alignment="CENTER" minWidth="65.0" text="Likes:" />
+						<TextField fx:id="likes" />
+					</children>
+				</HBox>
+				<HBox alignment="CENTER" spacing="105.0">
+					<children>
+						<Label alignment="CENTER" minWidth="65.0" text="Shares:" />
+						<TextField fx:id="shares" />
+					</children>
+				</HBox>
+			</children>
+		</VBox>
+		<HBox alignment="CENTER" spacing="11.0">
+			<children>
+				<Label alignment="CENTER" minWidth="65.0"
+					text="Date [DD/MM/YYYY HH:MM]):" />
+				<TextField fx:id="date" />
+			</children>
+		</HBox>
+		<Button fx:id="addPostButton" mnemonicParsing="false"
+			onAction="#addPost" text="Add Post">
+			<VBox.margin>
+				<Insets left="70.0" />
+			</VBox.margin>
+		</Button>
+		<Label fx:id="queryResult" minHeight="30.0" minWidth="0.0" />
+		<HBox alignment="CENTER_RIGHT" prefHeight="10.0" prefWidth="10.0">
+			<children>
+				<Button fx:id="backButton" minHeight="25.0" minWidth="50.0"
+					mnemonicParsing="false" onAction="#backButtonClicked" text="Back">
+					<HBox.margin>
+						<Insets right="40.0" />
+					</HBox.margin>
+				</Button>
+			</children>
+		</HBox>
+	</children>
+</VBox>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="500.0" prefWidth="650.0"
+	spacing="10.0" xmlns="http://javafx.com/javafx/20.0.1"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="controller.EditProfileController">
+	<children>
+		<Label text="Edit Profile">
+			<font>
+				<Font size="30.0" />
+			</font>
+		</Label>
+		<Label fx:id="fName" text="First Name:" />
+		<VBox alignment="TOP_CENTER" maxHeight="-Infinity"
+			maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+			spacing="10.0">
+			<children>
+				<HBox alignment="CENTER" spacing="10.0">
+					<children>
+						<Label alignment="CENTER" minWidth="65.0"
+							text="Change First Name:">
+							<HBox.margin>
+								<Insets />
+							</HBox.margin>
+						</Label>
+						<TextField fx:id="newFName" />
+					</children>
+				</HBox>
+				<Label fx:id="lName" text="Last Name:" />
+				<HBox alignment="CENTER" spacing="10.0">
+					<children>
+						<Label alignment="CENTER" minWidth="65.0"
+							text="Change Last Name: " />
+						<TextField fx:id="newLName" />
+					</children>
+				</HBox>
+				<Label fx:id="username" text="Username:" />
+				<HBox alignment="CENTER" spacing="10.0">
+					<children>
+						<Label alignment="CENTER" minWidth="65.0"
+							text="Change Username:  " />
+						<TextField fx:id="newUsername" />
+					</children>
+				</HBox>
+				<Label fx:id="password" text="Password:" />
+				<HBox alignment="CENTER" spacing="10.0">
+					<children>
+						<Label alignment="CENTER" minWidth="65.0"
+							text="Change Password:   " />
+						<TextField fx:id="newPassword" />
+					</children>
+				</HBox>
+			</children>
+		</VBox>
+		<Button fx:id="editProfileButton" mnemonicParsing="false"
+			onAction="#editProfile" text="Edit Profile">
+			<VBox.margin>
+				<Insets left="120.0" />
+			</VBox.margin>
+		</Button>
+		<Label fx:id="editProfileResult" minHeight="30.0" minWidth="0.0" />
+		<HBox alignment="CENTER_RIGHT" prefHeight="10.0" prefWidth="10.0">
+			<children>
+				<Button fx:id="backButton" minHeight="25.0" minWidth="50.0"
+					mnemonicParsing="false" onAction="#backButtonClicked" text="Back">
+					<HBox.margin>
+						<Insets right="40.0" />
+					</HBox.margin>
+				</Button>
+			</children>
+		</HBox>
+	</children>
+</VBox>

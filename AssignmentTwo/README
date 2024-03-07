@@ -1,0 +1,54 @@
+Link to github repository: 
+https://github.com/s3963096/Advanced-Programming-Assignment-2
+
+IDE used: Eclipse
+Java Version: used: jdk-20 JavaSE-20
+JavaFX Version: JavaFX21
+Database used: SQLLITE (DATABASE INCLUDED IN ZIP FOLDER)
+
+To install and run program download the folder from the github repository. Import the entire folder as a project into eclipse and then press run.
+
+For the OOP design of the program I have followed a MVC approach. Models, Views and Controllers are separated. Also I have used a singleton design pattern to
+code the JDBCConnection. There will only be one instance of JDBCConnection in the program. I have also used an Abstract class Controller to group all
+the attributes that the rest of the controllers share.
+
+Model
+	Users
+	Posts
+	
+Controllers
+	Controller (Abstract Class)
+	AddPostController.java
+	BulkImportController.java
+	DashboardController.java
+	DataVisualsController.java
+	EditProfileController.java
+	ExportViewController.java
+	GetVipController.java
+	IntegerInputLessThanZeroException.java
+	LoginController.java
+	RemovePostController.java
+	RetrievePostController.java
+	SignUpController.java
+	StartUpController.java
+	TopLikesController.java
+	VipDashboardController.java
+	
+Views
+	AddPostView.fxml
+	BulkImportView.fxml
+	DashboardView.fxml
+	DataVisualsView.fxml
+	EditProfileView.fxml
+	ExportView.fxml
+	GetVipView.fxml
+	LoginView.fxml
+	RemovePostView.fxml
+	RetrievePostView.fxml
+	SignUpView.fxml
+	StartUpView.fxml
+	TopLikesView.fxml
+	VipDashboardView.fxml
+	
+Exceptions
+	IncorrectDateInputException.java
